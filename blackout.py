@@ -4,6 +4,7 @@ if releaseVariables['enableBlackout']:
 else:
    print "## Clearing 'Postpone during blackout' on all tasks on all templates"
 
+# Recursively process (nested) tasks
 def processTask(task, level):
     print '  ' * level + "- {}".format(task.title)
     if task.isTaskGroup():
